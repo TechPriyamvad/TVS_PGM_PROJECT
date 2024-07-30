@@ -180,19 +180,6 @@
 
 ![SCHEMA DIAGRAM](assets/TVS_IB_ER_DIAGRAM.svg)
 
-### FAMILIAR
-- Web Front Layer – React.js, JavaScript, HTML5 & CSS3
-
-### UNFAMILIAR
-- Mobile Front Layer – Flutter (for Android and iOS platforms)
-- API Layer – Python/Django
-- Database Layer – Azure MSSQL
-- Notification Layer – Firebase
-- File Storage Layer – Azure Blob
-- Batch Processes – Azure Function App Instance to be shared to deploy Development Code for Batch Processing
-- Microsoft azure
-- google maps
-
 ### CONFIG DRIVEN UI ACCORDING TO COUNTRY
 `Entities dependent on country`
 - country_translation
@@ -225,13 +212,9 @@
 - feature testing
 - Zephyr software for testing
 
-## TO-DO
-- What is MVVM design pattern ✅
-- What is Active/Passive disaster recovery strategy✅
-- Do we have different web app for dealer and agency
 
 ## Doubts
-- Right now do we have repair order functionality in app
+- Right now do we have order functionality in app
 - Is the PGM mobile app live
     - If yes on which feature we need to work
     - If not do we need to develop app from scratch
@@ -239,9 +222,10 @@
     - If yes on which feature we need to work
     - If no do we need to develop the app from scratch
 - What type of data is stored in azure storage and database
+    - parts,product and training material data
 - Does mechanic can buy parts from PGM app or it is only used to locate the TVS genuine parts
 - Who are CMS users
-- What is SCORM
+    - who have access to create and update content using CMS UI 
 - Why we are using 2 cloud service providers i.e azure and firebase
 - Is the country rollout plan released
     - If yes then we to customize app according to selected country
