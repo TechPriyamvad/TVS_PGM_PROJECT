@@ -3,7 +3,7 @@
 ## Non Technical(`Overview of PGM APP`)
 
 ### What is PGM
-- Application which encourages a mechanic to buy TVS genuine parts.
+- Application helps mechanic to purchase genuine TVS parts
 
 ### Why we need PGM
 - Encourage mechanics to buy genuine parts.
@@ -104,13 +104,18 @@
 - It is security mechanism which is used to protect messages when they travel through interenet.
 - It encypts the message
 
+### Project Dependencies
+- `plivo`
+    - Used to integrate communication functionality such as voice call and sms
+    - To access api's,we need to create a plivo account
+
 ### Dataflow for parts
 
 ![Parts Dataflow](assets/parts_data_flow.png)
 
 <br>
 
-### Design
+### Design pattern
 
 ![PGM Design](assets/design.png)
 
@@ -162,29 +167,18 @@
 
 <br>
 
+`Scorm Module`
+    - It stands for Shareable Content Object Reference Model, is a set of technical standards used in e-learning and online training to ensure that learning content (referred to as "learning objects") can be easily shared across different learning management systems (LMS).
+    - It help in serving training material to PGM users.
+    - It is stored in azure blob storage
 ### Services
 - `Rest` architecture is used to create services
 - `Swagger` is used for api documentation
 
 
 ### Entities | Schema
-- mechanics
-- parts
-- rewards
-- catalogues
-- accessories
-- training
-- dealerStores
-- products
-- referrals
-- support
-- mechanic_parts
-- parts_catalogue
-- rewards_catalogue
-- training_mechanic
-- location
 
-### Architecture
+![SCHEMA DIAGRAM](assets/TVS_IB_ER_DIAGRAM.svg)
 
 ### FAMILIAR
 - Web Front Layer – React.js, JavaScript, HTML5 & CSS3
@@ -192,20 +186,49 @@
 ### UNFAMILIAR
 - Mobile Front Layer – Flutter (for Android and iOS platforms)
 - API Layer – Python/Django
-- Database Layer – PostgreSQL   Azure MSSQL
+- Database Layer – Azure MSSQL
 - Notification Layer – Firebase
 - File Storage Layer – Azure Blob
 - Batch Processes – Azure Function App Instance to be shared to deploy Development Code for Batch Processing
 - Microsoft azure
 - google maps
 
+### CONFIG DRIVEN UI ACCORDING TO COUNTRY
+`Entities dependent on country`
+- country_translation
+- vehicle
+- verification_document
+- dealer
+- country_language_map
+- users
+- country_vehicle_category_mapping
+- role_country_mapping
+- order
+- part
+- privacy_policy_config
+- distributor
+- questionaire_country_mapping
+
+### Requirements gathering to decide whether we should use server driven or config driven UI for below dynamic data
+- locate nearby dealer stores according to region
+- availability of dealer store
+- opening and closing time of dealer stores
+- training program tailored for each mechanic
+- reward program tailored for each mechanic
+- order management
+- parts availability
+- language tailored for region
+- app updates are less painful
+
 ### Testing 
 - Security testing
 - feature testing
+- Zephyr software for testing
 
 ## TO-DO
-- What is MVVM design pattern
-- What is Active/Passive disaster recovery strategy
+- What is MVVM design pattern ✅
+- What is Active/Passive disaster recovery strategy✅
+- Do we have different web app for dealer and agency
 
 ## Doubts
 - Right now do we have repair order functionality in app
