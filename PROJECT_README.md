@@ -3,7 +3,7 @@
 ## Non Technical(`Overview of PGM APP`)
 
 ### What is PGM
-- Application helps mechanic to purchase genuine TVS parts
+- It stands for private garage mechanic
 
 ### Why we need PGM
 - Encourage mechanics to buy genuine parts.
